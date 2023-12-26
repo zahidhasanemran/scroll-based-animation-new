@@ -1,0 +1,25 @@
+
+section{
+  height: 100vh;
+}
+
+.topProgressBar{
+  height: 10px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: lime;
+  scale: 0.01 1;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+
+}
+
+@keyframes scroll-watcher {
+  to {scale: 1 1}
+}
+
+
+
