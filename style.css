@@ -1,6 +1,6 @@
 
 section{
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .topProgressBar{
@@ -12,6 +12,8 @@ section{
   z-index: 999;
   background: lime;
   scale: 0.01 1;
+
+  transform-origin: left;
   animation: scroll-watcher linear;
   animation-timeline: scroll();
 
@@ -22,4 +24,23 @@ section{
 }
 
 
+.fade-img-in img{
+  max-width: 100%;
+  height: auto;
 
+  scale: 0.5;
+  opacity: 0.5;
+  animation: fade-image-in linear forwards;
+  animation-timeline: view();
+  /* animation-range-start: cover;
+  animation-range-end: 700px; */
+  animation-range: entry;
+}
+
+
+@keyframes fade-image-in {
+  /* from {scale: 0; opacity: 0;} */
+  to {scale: 1; opacity: 1;}
+}
+
+/* @media (prefers-reduced-motion: no-preference){} */
